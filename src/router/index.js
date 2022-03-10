@@ -5,7 +5,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 const routes = [
   {
     path: '/',
-    component: AboutPage
+    redirect: '/about'
   },
   {
     path: '/search',

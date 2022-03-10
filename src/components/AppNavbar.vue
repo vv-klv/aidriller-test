@@ -23,21 +23,21 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .navbar {
     display: flex;
     padding: 0 15px;
-}
-.navbar__btns {
-     display: flex;
-     gap: 30px;
-     margin-left: auto;
- }
-.navbar__btn {
-    box-shadow:
-        0 3px 1px -2px rgb(0 0 0 / 20%),
-        0 2px 2px 0    rgb(0 0 0 / 14%),
-        0 1px 5px 0    rgb(0 0 0 / 12%);
- }
 
+    &__btns {
+        display: flex;
+        margin-left: auto;
+        gap: 30px;
+    }
+
+    &__btn {
+        box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%),
+                    0 2px 2px 0    rgb(0 0 0 / 14%),
+                    0 1px 5px 0    rgb(0 0 0 / 12%);
+    }
+}
 </style>

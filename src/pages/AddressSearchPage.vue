@@ -6,7 +6,7 @@
 <script>
 import AddressSearchForm from '@/components/AddressSearchForm';
 import AddressTable from '@/components/AddressTable';
-import { mapGetters, mapState } from 'vuex';
+import { mapGetters } from 'vuex';
 
 export default {
     name: "AddressSearchPage",
@@ -15,38 +15,19 @@ export default {
         AddressTable
     },
     computed: {
-        ...mapState({
-            data: state => state.address.data
-        }),
         ...mapGetters({
-            getData: 'address/getData',
+            getAddresses: 'address/getAddresses',
         }),
         response() {
-            return [
-                {
-                    title: 'Индекс',
-                    body: this.getData.postal_code,
-                }, {
-                    title: 'Город (область)',
-                    body: this.getData.city,
-                }, {
-                    title: 'Улица',
-                    body: this.getData.street,
-                }, {
-                    title: 'Дом',
-                    body: this.getData.house,
-                }, {
-                    title: 'Квартира',
-                    body: this.getData.flat,
-                },
-            ];
+            return {
+                title: ['Индекс', 'Город (область)', 'Улица', 'Дом', 'Квартира'],
+                body: this.getAddresses,
+            }
         }
     }
 }
 </script>
 
 <style scoped>
-.addressSearchForm {
-    margin-top: 180px;
-}
+
 </style>

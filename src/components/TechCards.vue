@@ -1,7 +1,7 @@
 <template>
-    <h1 class="cards__title">Используемые библиотеки и сервисы</h1>
+    <h2 class="cards-title">Используемые библиотеки и сервисы</h2>
 
-    <div class="cards__container">
+    <div class="cards-container">
         <v-card class="card">
             <a href="https://vuejs.org" target="_blank">
                 <img
@@ -104,11 +104,10 @@ export default {
 
 </style>
 <style lang="scss" scoped>
-.cards__title {
+.cards-title {
     text-align: center;
-
 }
-.cards__container {
+.cards-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -131,8 +130,8 @@ export default {
         display: block;
         margin: 0 auto;
         height: 80px;
-        width: auto;
         min-width: 100px;
+        max-width: 100px;
 
         &:hover {
             transition: .2s ease-in-out;
@@ -174,6 +173,11 @@ export default {
             line-height: 1;
             border-bottom: none;
             margin-right: 15px;
+            padding-bottom: 0;
+        }
+
+        &__descr {
+            margin-top: 0;
         }
     }
 }
